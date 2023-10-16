@@ -60,7 +60,7 @@ services:
       - /sys:/sys:ro
       - /var/lib/docker/:/var/lib/docker:ro
     ports:
-      - 8080:8080
+      - 8090:8090
     restart: always
     deploy:
       mode: global
@@ -77,6 +77,6 @@ services:
     env_file:
       - ./grafana/config.monitoring
     ports:
-      - 3000:3000
+      - 3030:3030
     depends_on:
       - prometheus
